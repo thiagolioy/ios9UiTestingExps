@@ -26,12 +26,13 @@ describe(@"FirstTryUITests", ^{
        XCUIApplication *app = [[XCUIApplication alloc] init];
        XCUIElement *firstTextTextField = app.textFields[@"First Text"];
        [firstTextTextField tap];
-       [firstTextTextField typeText:@"Primeiro Teste"];
+       [firstTextTextField typeText:@"First"];
        
        XCUIElement *secondTextTextField = app.textFields[@"Second Text"];
        [secondTextTextField tap];
-       [secondTextTextField typeText:@"Segundo Teste"];
+       [secondTextTextField typeText:@"Second"];
        [app.buttons[@"Conect Right Now"] tap];
+       
    });
 
 });

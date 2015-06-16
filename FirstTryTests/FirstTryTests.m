@@ -10,26 +10,52 @@
 #import <Specta.h>
 #import <Expecta.h>
 
+#import "ViewController.h"
+
+@interface ViewController (Private)
+@property(nonatomic,strong)UITextField *first;
+@property(nonatomic,strong)UITextField *second;
+@property(nonatomic,strong)UIButton *connectButton;
+
+@end
+
 SpecBegin(FirstTryTests)
 
 describe(@"FirstTryTests", ^{
-   it(@"will generate coverage ? ", ^{
-       expect(1).to.equal(1);
-   });
-    
-    
-    
-    it(@"will generate coverage ? ", ^{
+    __block ViewController *vc;
+    beforeAll(^{
         UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-        UIViewController *vc = [sb instantiateInitialViewController];
+        vc = (ViewController*)[sb instantiateInitialViewController];
+        [vc view];
+    });
+    
+    it(@"should exists", ^{
         expect(vc).toNot.beNil();
     });
     
-    it(@"will call memory warning", ^{
-        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-        UIViewController *vc = [sb instantiateInitialViewController];
-        [vc didReceiveMemoryWarning];
-        expect(1).to.equal(1);
+    it(@"should have a wired first textfield", ^{
+        expect(vc.first).toNot.beNil();
+    });
+    
+    it(@"should have a wired second textfield", ^{
+        expect(vc.second).toNot.beNil();
+    });
+    
+    it(@"should have textfield delegate wired",^{
+        expect(vc.first.delegate).toNot.beNil();
+        expect(vc.second.delegate).toNot.beNil();
+    });
+    
+    it(@"should have a wired button textfield", ^{
+        expect(vc.second).toNot.beNil();
+    });
+    
+    it(@"should conform to uitextfield delegate", ^{
+        expect(vc).conformTo(@protocol(UITextFieldDelegate));
+    });
+    
+    it(@"should respond to uitextfield should return method", ^{
+        expect(vc).respondTo(@selector(textFieldShouldReturn:));
     });
 });
 

@@ -23,6 +23,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Lcn-PZ-0bz"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Second Text" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gVw-WR-8dh">
                                 <rect key="frame" x="20" y="238" width="560" height="30"/>
@@ -31,6 +34,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="wsV-eI-KoQ"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hrC-im-qVu">
                                 <rect key="frame" x="20" y="278" width="560" height="44"/>
@@ -38,6 +44,9 @@
                                     <constraint firstAttribute="height" constant="44" id="4Tu-bQ-tr5"/>
                                 </constraints>
                                 <state key="normal" title="Conect Right Now"/>
+                                <connections>
+                                    <action selector="connectButtonAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="hoz-YJ-pS6"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
