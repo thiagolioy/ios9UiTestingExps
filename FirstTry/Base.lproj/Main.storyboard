@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.17" systemVersion="14E26a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.14"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Text" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mWf-9n-ceH">
+                                <rect key="frame" x="20" y="198" width="560" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="AWE-OE-VHl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Second Text" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gVw-WR-8dh">
+                                <rect key="frame" x="20" y="238" width="560" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="CEG-Ek-syT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hrC-im-qVu">
+                                <rect key="frame" x="20" y="278" width="560" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="4Tu-bQ-tr5"/>
+                                </constraints>
+                                <state key="normal" title="Conect Right Now"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hrC-im-qVu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="0jx-4j-3jQ"/>
+                            <constraint firstAttribute="trailing" secondItem="gVw-WR-8dh" secondAttribute="trailing" constant="20" id="7Pd-Zk-rZb"/>
+                            <constraint firstAttribute="trailing" secondItem="hrC-im-qVu" secondAttribute="trailing" constant="20" id="Bcc-DZ-HMe"/>
+                            <constraint firstItem="hrC-im-qVu" firstAttribute="top" secondItem="gVw-WR-8dh" secondAttribute="bottom" constant="10" id="BuZ-Nx-0rm"/>
+                            <constraint firstItem="gVw-WR-8dh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="S21-nu-boX"/>
+                            <constraint firstItem="gVw-WR-8dh" firstAttribute="top" secondItem="mWf-9n-ceH" secondAttribute="bottom" constant="10" id="V4T-HS-voB"/>
+                            <constraint firstItem="hrC-im-qVu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XbO-Yp-QTn"/>
+                            <constraint firstItem="mWf-9n-ceH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="cLX-VT-oma"/>
+                            <constraint firstAttribute="trailing" secondItem="mWf-9n-ceH" secondAttribute="trailing" constant="20" id="lvh-oh-f07"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="connectButton" destination="hrC-im-qVu" id="sbN-i9-x3H"/>
+                        <outlet property="first" destination="mWf-9n-ceH" id="cYX-uh-ChQ"/>
+                        <outlet property="second" destination="gVw-WR-8dh" id="mqk-HP-h4c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
